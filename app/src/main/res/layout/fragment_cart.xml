@@ -5,6 +5,7 @@
         <variable
             name="model"
             type="com.s3enterprises.shoppingapp.MainActivityViewModel" />
+        <import type="android.view.View"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -83,6 +84,7 @@
             android:drawablePadding="10dp"
             android:gravity="center"
             app:drawableStartCompat="@drawable/ic_baseline_delete_sweep_24"
+            android:visibility="@{model.cartCount>0?View.VISIBLE:View.INVISIBLE}"
             />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -92,6 +94,20 @@
             app:layout_constraintTop_toBottomOf="@id/clear_all_button"
             app:layout_constraintBottom_toTopOf="@id/total_label"
             android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/clear_all_button"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="?android:textColorPrimary"
+            android:text="@string/no_items"
+            android:visibility="@{model.cartCount==0?View.VISIBLE:View.INVISIBLE}"
             />
 
         <Button

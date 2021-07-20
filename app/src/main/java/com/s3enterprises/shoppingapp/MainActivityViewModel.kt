@@ -50,4 +50,8 @@ class MainActivityViewModel : ViewModel() {
         cartCount.value = 0
     }
 
+    fun placeOrder() {
+        clearCart()
+    }
+
 }

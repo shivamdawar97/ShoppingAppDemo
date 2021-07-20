@@ -21,7 +21,7 @@
     <string name="clear_cart">Clear</string>
     <string name="checkout_title">Order Details</string>
     <string name="delivery_addresss">Delivery Address</string>
-    <string name="order_summary">Order Summry</string>
+    <string name="order_summary">Order Summary</string>
     <string name="price_details">Price Details</string>
     <string name="place_order">Place Order</string>
     <string name="no_items">Your cart is empty</string>

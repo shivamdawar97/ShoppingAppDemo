@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.s3enterprises.shoppingapp.MainActivityViewModel"
+            />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProductsFragment"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/app_title"
+            android:textSize="22sp"
+            android:fontFamily="serif"
+            android:textColor="?android:textColorPrimary"
+            android:layout_margin="20dp"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:srcCompat="@drawable/ic_shopping_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            android:layout_marginEnd="20dp"
+            android:tint="?android:textColorPrimary"
+            />
+
+
+        <TextView
+            android:id="@+id/cart_patch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/cart_icon"
+            app:layout_constraintEnd_toEndOf="@id/cart_icon"
+            android:background="@drawable/circle_visited"
+            android:textColor="@color/white"
+            tools:text="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/cart_icon"
+            app:layout_constraintBottom_toTopOf="@id/cart_icon"
+            android:visibility="@{model.cartCount>0?View.VISIBLE:View.INVISIBLE}"
+            android:text="@{String.valueOf(model.cartCount)}"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/products_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="20dp"
+            android:visibility="@{model.isLoading?View.INVISIBLE:View.VISIBLE}"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="@{model.isLoading?View.VISIBLE:View.INVISIBLE}"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

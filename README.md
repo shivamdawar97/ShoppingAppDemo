@@ -5,8 +5,8 @@ This is a demo android application using latest android jetpack libraries follow
 * This application follow the single Activity architecture
 
 Libraries Used
-*Retrofit - for api calls
-*Navigation Component
-*ViewModel and LiveDara
-*Glide
-*Coroutines
+* Retrofit 
+* Navigation Component
+* ViewModel and LiveDara
+* Glide
+* Coroutines

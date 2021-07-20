@@ -64,57 +64,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/delivery_address_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/delivery_addresss"
-                    android:layout_margin="20dp"
-                    android:textAllCaps="true"
-                    android:textColor="?android:textColorPrimary"
-                    />
-
-                <EditText
-                    android:id="@+id/delivery_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="@={address}"
-                    />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="?android:textColorPrimary"
-                    android:layout_margin="5dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:textAllCaps="true"
-                    android:textColor="?android:textColorPrimary"
-                    android:text="@string/order_summary"
-                    />
-
-                <LinearLayout
-                    android:id="@+id/summry_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp"
-                    />
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="?android:textColorPrimary"
-                    android:layout_margin="5dp"
-                    />
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
@@ -205,6 +154,60 @@
                         />
 
                 </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:textColorPrimary"
+                    android:layout_margin="5dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/delivery_address_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_addresss"
+                    android:layout_margin="20dp"
+                    android:textAllCaps="true"
+                    android:textColor="?android:textColorPrimary"
+                    />
+
+                <EditText
+                    android:id="@+id/delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@={address}"
+                    android:inputType="textPersonName"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:textColorPrimary"
+                    android:layout_margin="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:textAllCaps="true"
+                    android:textColor="?android:textColorPrimary"
+                    android:text="@string/order_summary"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/summry_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    />
+
 
 
             </LinearLayout>
